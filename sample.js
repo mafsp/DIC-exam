@@ -26,7 +26,7 @@ $(document).ready(function(){
 
   function get_achievement(){
     // ここに、ランクの値の文字列（平均点が80点以上なら"A"、60点以上なら"B"、40点以上なら"C"、それ以下なら"D"）を出力する処理を書き込む
-  　$('#btn-evaluation').click(function() {
+
     
       function getam(){
     
@@ -43,7 +43,7 @@ $(document).ready(function(){
         sum = sum + subject_points[3];
         sum = sum + subject_points[4];
 
-        let avarage = sum / subject_points.length;  　  
+        let avarage = sum / subject_points.length;
 
   　  
         if (avarage>=80){
@@ -63,7 +63,7 @@ $(document).ready(function(){
     
       $("#evaluation").text(getam());
       
-    });
+
     
   };
 
@@ -72,7 +72,6 @@ $(document).ready(function(){
 
   function get_pass_or_failure(){
     // ここに、全ての教科が60点以上なら"合格"の文字列、一つでも60点未満の教科があったら"不合格"の文字列を出す処理を書き込む
-    $('#btn-judge').click(function() {
       
       function gpof(subject_points){
       
@@ -96,7 +95,6 @@ $(document).ready(function(){
  
       $("#judge").text(gpof(subject_points));
       
-    });
   }
 
 
