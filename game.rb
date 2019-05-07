@@ -1,12 +1,20 @@
 class Player
   def hand
     # コンソールを入力待ち状態にし、プレイヤーがコンソールから打ち込んだ値を出力する処理のメソッドの処理をこの中に作成する
-    puts "数字を入力してください\r\n0: グー\r\n1: チョキ\r\n2: パー"
+    puts "数字を入力してください\r\n1: グー\r\n2: チョキ\r\n3: パー"
+
+    # number_test = gets
+    # if number_test == "0" || number_test == "1" || number_test == "2"
+    #   return number_test.to_i
+    # else
+    #   hand
+    # end
+
     number = gets.to_i
-    if number != 0 && number != 1 && number != 2
-      hand
-    else
+    if number == 1 || number == 2 || number == 3
       return number
+    else
+      hand
     end
   end
 end
@@ -16,7 +24,7 @@ end
 class Enemy
   def hand
     # グー、チョキ、パーの値をランダムに出力するメソッドの処理をこの中に作成する
-    return rand(0..2)
+    return rand(1..3)
   end
 end
 
